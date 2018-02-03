@@ -16,5 +16,5 @@ shape@ main_shape()
 void main()
 {
    shape@ obj = main_shape();
-   obj.write_xcsg(GetInputFullPath(),secant_tolerance:0.02);
+   obj.write_xcsg(GetInputFullPath(),secant_tolerance:-1);
 }
