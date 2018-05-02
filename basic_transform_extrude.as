@@ -7,7 +7,9 @@ shape@ main_shape()
 {
   // create a rounded square and a circle to use as profiles
   double side = 20;
-  shape2d@ s1 = offset2d(square(side,center:true),r:3);
+//  shape2d@ s1 = offset2d(square(side,center:true),r:3);
+  shape2d@ s1 = square(side,center:true);
+ // shape2d@ s2 = rotate_z(deg:55)*s1;
   shape2d@ s2 = circle(0.3*side*sqrt(2.0));
   
   // extrude from s1 to a translated copy of s2
@@ -20,5 +22,5 @@ void main()
 {
    shape@ obj = main_shape();
    // set the secant tolerance to obtain a detailed mesh
-   obj.write_xcsg(GetInputFullPath(),secant_tolerance:0.005);
+   obj.write_xcsg(GetInputFullPath(),secant_tolerance:0.01);
 }
