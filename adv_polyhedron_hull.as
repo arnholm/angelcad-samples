@@ -4,7 +4,6 @@
 
 shape@ main_shape()
 {
-   const double PI=4.0*atan(1.0);
    double radius = 100.0;
 
    // array to contain point cloud
