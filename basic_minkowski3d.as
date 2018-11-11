@@ -3,8 +3,9 @@
 
 shape@ main_shape()
 {
-   solid@ c = rotate_x(deg:30)*cuboid(20,20,5);
-   solid@ s = sphere(r:2);
+   double sz=40;
+   solid@ c = rotate_x(deg:30)*cuboid(sz,sz,sz*0.2,center:true);
+   solid@ s = sphere(r:sz*0.1);
    
    return minkowski3d(c,s);
 }
@@ -12,5 +13,5 @@ shape@ main_shape()
 void main()
 {
    shape@ obj = main_shape();
-   obj.write_xcsg(GetInputFullPath(),secant_tolerance:0.003);
+   obj.write_xcsg(GetInputFullPath(),secant_tolerance:0.01);
 }

@@ -56,14 +56,17 @@ shape@ main_shape()
    double th  = 1.6;
    double th_lip  = 0.8;
    
-   return   rotate_y(deg:-90)*part1(len,wid,hei,ro,ri,th,th_lip) 
-          + translate(len/2,0,0)*rotate_y(deg:90)*rotate_z(deg:180)*part2(len,wid,hei,ro,ri,th,th_lip)
-          - translate(0,0,-len/4)*rotate_y(deg:90)*cylinder(r:5,h:200,center:true);
-   
+   solid@ obj = rotate_y(deg:-90)*part1(len,wid,hei,ro,ri,th,th_lip) 
+              + translate(len/2,0,0)*rotate_y(deg:90)*rotate_z(deg:180)*part2(len,wid,hei,ro,ri,th,th_lip)
+              - translate(0,0,-len/4)*rotate_y(deg:90)*cylinder(r:5,h:200,center:true);
+              
+   // center the box
+   pos3d@ c = obj.box().center();
+   return  translate(-c.x(),-c.y(),-c.z())*obj;
 }
 
 void main()
 {
    shape@ obj = main_shape();
-   obj.write_xcsg(GetInputFullPath(),secant_tolerance:0.011);
+   obj.write_xcsg(GetInputFullPath(),secant_tolerance:0.02);
 }

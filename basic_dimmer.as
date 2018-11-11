@@ -1,5 +1,6 @@
 // AngelCAD code: basic_dimmer.as
 // Enables manual override of rear view mirror auto dimmer
+// https://www.thingiverse.com/thing:3158616
 //
 // Piece to be fastened over rear view mirror ambient light sensor, so the sensor
 // is looking through the window of the printed piece. The ambient light sensor 

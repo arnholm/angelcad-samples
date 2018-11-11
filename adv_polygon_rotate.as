@@ -42,7 +42,7 @@ shape@ main_shape()
    cout << "optimal polygon: ";
    for(uint i=0; i<p_opt.size(); i++) {
       pos2d@ v = p_opt.vertex(i);
-      cout << "(" << v.x() << ',' << v.y() << ") ";
+      cout << "\n(" << v.x() << ',' << v.y() << ")";
    }
    cout << "\n";
 

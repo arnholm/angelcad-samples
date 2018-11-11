@@ -17,7 +17,7 @@ shape@ main_shape()
    // the result will be a torus.
 
    shape2d@ profile = translate(100,0)*square(25);
-   return rotate_extrude(profile,deg:135);
+   return scale(0.25)*rotate_extrude(profile,deg:135);
 }
 
 void main()

@@ -3,14 +3,16 @@
 
 shape@ main_shape()
 {
+   double sz = 25;
+   
    // the 4 apex ponts
    pos3d@[] points = 
    { 
-      pos3d(+10,+10,  0), 
-      pos3d(+10,-10,  0), 
-      pos3d(-10,-10,  0), 
-      pos3d(-10,+10,  0), 
-      pos3d(  0,  0,+10)  // top point
+      pos3d(+sz,+sz,  0), 
+      pos3d(+sz,-sz,  0), 
+      pos3d(-sz,-sz,  0), 
+      pos3d(-sz,+sz,  0), 
+      pos3d(  0,  0,+sz)  // top point
    };
 
 	// a pface is a polygon face. 

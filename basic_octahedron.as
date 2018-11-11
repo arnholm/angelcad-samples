@@ -21,8 +21,8 @@ shape@ main_shape()
 {
    // intersect a cube with the octahedron to create a cube with trimmed corners
    
-   double cornerwid = 5;
-   double wid = 20;
+   double cornerwid = 10;
+   double wid = 50;
    return octahedron(size:wid*sqrt(2)-cornerwid/2) & cube(size:wid,center:true);
 }
 

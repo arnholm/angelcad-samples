@@ -3,11 +3,13 @@
 
 shape@ main_shape()
 {
+   double sz = 5;
+   
    // create some simple primitives, each centered at origin
-   circle@ s1    = circle(r:50);
-   square@ s2    = square(size:50,center:true);
-   rectangle@ s3 = rectangle(dx:150,dy:70,center:true);
-   polygon@ s4   = polygon(pos2d(-50,-50), pos2d(+50,-50), pos2d(0,+50));
+   circle@ s1    = circle(r:sz);
+   square@ s2    = square(size:sz,center:true);
+   rectangle@ s3 = rectangle(dx:3*sz,dy:sz*1.5,center:true);
+   polygon@ s4   = polygon(pos2d(-sz,-sz), pos2d(+sz,-sz), pos2d(0,+sz));
 
    // layout the shapes along the x-axis, store layout in "myshape".
    // To simplify layout, put the shapes in an array of 2d shapes
@@ -15,7 +17,7 @@ shape@ main_shape()
 
    shape2d@ myshape = null;
    double offset_x  = 0;  // accumulated offset in x-direction
-   double sep_x     = 10; // separation between shapes
+   double sep_x     = sz/5; // separation between shapes
    for(uint i=0; i<shapes.size(); i++) {
       if(i==0) {
          @myshape = shapes[i];
@@ -30,11 +32,15 @@ shape@ main_shape()
          @myshape = myshape + translate(offset_x,0)*shapes[i];
       }
    }
+   
+   // center the result
+   pos3d@ c = myshape.box().center();
+   @myshape = translate(-c.x(),-c.y())*myshape;
 
    bool STL=true;  // change to false to create DXF
    if(STL) {
       // STL requires 3d, so extrude in z-direction
-      return linear_extrude(myshape,height:10);
+      return linear_extrude(myshape,height:sz/5);
    }
    else {
       // alternatively, return as 2d object to create DXF file

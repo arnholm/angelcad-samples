@@ -3,7 +3,7 @@
 shape@ main_shape()
 {
    // create cube & sphere in default positions
-   double d = 100;
+   double d = 30;
    solid@ mycub = cube(size:d);
    solid@ mysph = sphere(r:d*0.8);
 

@@ -44,10 +44,10 @@ shape@ main_shape()
 
    shape2d@ myshape = union2d(profiles);
 
-   bool STL=false;  // change to false to create DXF
+   bool STL=true;  // change to false to create DXF
    if(STL) {
       // STL requires 3d, so extrude in z-direction
-      return linear_extrude(myshape,height:3);
+      return translate(-30,0)*scale(0.25)*linear_extrude(myshape,height:3);
    }
    else {
       // alternatively, return as 2d object to create DXF file

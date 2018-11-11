@@ -17,7 +17,7 @@ shape@ main_shape()
    shape2d@ poly = translate(10,0)*rotate_z(deg:-90)*polygon(points);
 
    // perform 5 full rotations, with s small pitch to offset the threads
-   return rotate_extrude(poly,deg:360*5,pitch:3.1);
+   return scale(2.0)*rotate_extrude(poly,deg:360*5,pitch:3.1);
 }
 
 void main()
