@@ -1,4 +1,4 @@
-// AngelCAD sample: basic_cube_sphere.as
+// AngelCAD sample: cube_minus_sphere.as
 
 shape@ main_shape()
 {

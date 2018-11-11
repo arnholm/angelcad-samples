@@ -1,4 +1,4 @@
-// AngelCAD sample: basic_primitives_2d.as
+// AngelCAD sample: tutorial_primitives_2d.as
 // 2d primitives and how to transform them
 
 shape@ main_shape()

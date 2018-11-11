@@ -1,4 +1,4 @@
-// AngelCAD sample: adv_polyhedron_hull.as
+// AngelCAD sample: polyhedron_from_points.as
 // construct convex hull from point cloud by
 // constructing polyhedron with points only
 

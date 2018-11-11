@@ -1,4 +1,4 @@
-// AngelCAD code.
+// AngelCAD sample: minkowski3d_2.as
 // Illustrate minkowski rounding of concave object A
 
 shape@ main_shape()

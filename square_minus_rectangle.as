@@ -1,4 +1,4 @@
-// AngelCAD sample: basic_difference_2d.as
+// AngelCAD sample: square_minus_rectangle.as
 // boolean difference operation in 2D,
 // make a square with rectangular hole
 

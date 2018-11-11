@@ -1,4 +1,4 @@
-// AngelCAD code sample: constructive_solid_geometry.as
+// AngelCAD code sample: csg_wikipedia.as
 // Modelled after https://en.wikipedia.org/wiki/Constructive_solid_geometry
 
 shape@ main_shape()

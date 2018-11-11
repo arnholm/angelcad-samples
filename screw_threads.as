@@ -1,5 +1,5 @@
-// AngelCAD sample: adv_thread.as
-// demonstrate use of rotate_extrude to create a thread.
+// AngelCAD sample: screw_threads.as
+// demonstrate use of rotate_extrude with non-zero pitch to create screw threads.
 
 shape@ main_shape()
 {

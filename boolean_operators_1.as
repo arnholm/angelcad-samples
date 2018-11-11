@@ -1,4 +1,4 @@
-// AngelCAD sample: basic_boolean_operators.as
+// AngelCAD sample: boolean_operators_1.as
 // demonstrate use of operator overloading for booleans
 
 shape@ main_shape()

@@ -1,6 +1,6 @@
-// AngelCAD sample: basic_offset_2d.as
+// AngelCAD sample: tutorial_offset2d.as
 // demonstrate ofsetting of 2d shapes
-// creating rounding and chamfers
+// using rounding and chamfers
 
 shape@ main_shape()
 {

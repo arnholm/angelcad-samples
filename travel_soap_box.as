@@ -1,5 +1,5 @@
-// AngelCAD code.
-// Create a soap box
+// AngelCAD sample: travel_soap_box.as
+// Create a simple soap box
 // https://www.thingiverse.com/thing:2819336
 
 solid@ soap(double l, double w, double h, double r)

@@ -1,4 +1,4 @@
-// AngelCAD sample: basic_octahedron.as
+// AngelCAD sample: octahedron.as
 // Illustrate creation and use of octahedron
 
 solid@ octahedron(double size)

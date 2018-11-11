@@ -1,4 +1,4 @@
-// AngelCAD code: basic_dimmer.as
+// AngelCAD code: auto_dimmer_override.as
 // Enables manual override of rear view mirror auto dimmer
 // https://www.thingiverse.com/thing:3158616
 //

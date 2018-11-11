@@ -1,4 +1,4 @@
-// AngelCAD code.
+// AngelCAD sample: minkowski3d_1.as
 // Illustrate minkowski rounding of solid c, using a sphere
 
 shape@ main_shape()

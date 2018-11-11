@@ -1,4 +1,4 @@
-// AngelCAD code.
+// AngelCAD sample: flower_stand_wheel.as
 // Wheel for flower stand https://www.thingiverse.com/thing:3114292
 
 shape@ main_shape()

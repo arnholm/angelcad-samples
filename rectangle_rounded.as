@@ -1,4 +1,5 @@
-// AngelCAD code.
+// AngelCAD sample: rectangle_rounded.as
+// demonstrate creating a rounded rectangle using 2d minkowski
 
 shape@ main_shape()
 {

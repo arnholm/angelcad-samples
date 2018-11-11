@@ -1,4 +1,4 @@
-// AngelCAD sample: basic_transform_extrude.as
+// AngelCAD sample: transform_extrude_1.as
 // demonstrate the transform_extrude operation.
 // Similar to linear_extrude, but transitioning 
 // from one profile to another.

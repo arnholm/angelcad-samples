@@ -1,4 +1,4 @@
-// AngelCAD sample: basic_polyhedron.as
+// AngelCAD sample: polyhedron_pyramid.as
 // Build a polyhedron with a square base from scratch. 
 
 shape@ main_shape()

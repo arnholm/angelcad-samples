@@ -1,4 +1,4 @@
-// AngelCAD sample: basic_hull2d.as
+// AngelCAD sample: hull2d_1.as
 // demonstrate the hull2d operation
 // it creates the convex hull of any number of 2d objects
 

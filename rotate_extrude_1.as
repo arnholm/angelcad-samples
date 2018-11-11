@@ -1,5 +1,5 @@
-// AngelCAD sample: basic_rotate_extrude.as
-// Illustrate rotate extrude operation
+// AngelCAD sample: rotate_extrude_1.as
+// Illustrate rotate extrude operation, creating 3d object from 2d shape
 
 shape@ main_shape()
 {

@@ -1,4 +1,4 @@
-// AngelCAD sample: basic_mirror.as
+// AngelCAD sample: cuboid_mirror.as
 // Illustrate mirror transform
 
 shape@ main_shape()
