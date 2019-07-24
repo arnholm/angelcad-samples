@@ -1,5 +1,5 @@
-// AngelCAD code.
-// example demonstrates 3d filetting using minkowski3d
+// AngelCAD sample: minkowski3d_3.as
+// Demonstrates 3d filetting using minkowski3d
 
 solid@ object(double sz)
 {
@@ -29,5 +29,5 @@ shape@ main_shape()
 void main()
 {
    shape@ obj = main_shape();
-   obj.write_xcsg(GetInputFullPath(),secant_tolerance:-1);
+   obj.write_xcsg(GetInputFullPath(),secant_tolerance:0.01);
 }
