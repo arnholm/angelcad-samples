@@ -8,12 +8,32 @@ solid@ ellipseA()
    solid@ c1  = hull3d(translate(-dx,dy,0)*leg,translate(dx,-dy,0)*leg);
    solid@ c2  = hull3d(translate(-dx,-dy,0)*leg,translate(dx,+dy,0)*leg);
    solid@ box = translate(-dx,-dy,0)*cuboid(2*dx,2*dy,24);
-   return box+c1+c2;
+   
+   solid@ hole = cylinder(r:3.8/2, h:15,center:true);
+   solid@ holes = translate(-dx,-dy,0)*hole
+                + translate(+dx,-dy,0)*hole
+                + translate(+dx,+dy,0)*hole
+                + translate(-dx,+dy,0)*hole;
+   
+ //  return box+c1+c2 + mounting_plate() + holes;
+ 
+   // for mounting plate only
+   return mounting_plate() - holes - translate(-5,5.5,0)*rotate_z(deg:-5)*holes;
+}
+
+solid@ mounting_plate()
+{
+   solid@ plate = translate(-2.5,0,0)*cuboid(55,60,3,center:true) - translate(43,0,0)*cuboid(42,43,100,center:true);
+   
+   solid@ h = translate(0,0,-2.1)*rotate_x(deg:90)*(cylinder(r:4,h:8,center:true) - cylinder(r:2.2,h:100,center:true));
+   
+   double dx = 2.2;
+   return plate + translate(dx+25,26,-0.3)*h + translate(dx+25,-26,-0.3)*h;
 }
 
 solid@ hinge()
 {
-   solid@ h = rotate_x(deg:90)*(cylinder(r:3.5,h:50,center:true) - cylinder(r:2,h:100,center:true));
+   solid@ h = rotate_x(deg:90)*(cylinder(r:3.5,h:50,center:true) - cylinder(r:2.1,h:100,center:true));
    return h;
 }
 
@@ -26,6 +46,7 @@ solid@ trim_hinge()
 {
    return rotate_x(deg:90)*cylinder(r:6,h:10,center:true);
 }
+
 
 shape@ main_shape()
 {
@@ -41,9 +62,14 @@ shape@ main_shape()
                  + translate(20,0,26.5)*hinge()
                  - translate(20,-25.5,26.5)*trim_hinge()
                  - translate(20,+25.5,26.5)*trim_hinge()
+                 + translate(-20,0,12)*cuboid(3,25,3,center:true);
                  ;
-                 
-    return plate + translate(0,0,40)*ellipseA();
+  
+    // 3A main adapter    
+    return plate; 
+
+    // 3B for mounting plate only           
+    // return rotate_y(deg:180)*translate(-7.2,0,28.5)*ellipseA();
 }
 
 void main()
