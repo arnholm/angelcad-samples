@@ -14,11 +14,11 @@ del /Q xcsg\*
 
 REM Process all AngelCAD *.as files in this folder
 for %%d in (*.as) do (
-   set PROCESS=1
+   set PROCESS="true"
 
    echo.
    echo ---------------
-   if !PROCESS!=="1" (
+   if !PROCESS! == "true" ( 
        echo --- RUNNING %%d
        %ANGELCAD_PATH%\as_csg "%%d" -outsub=xcsg
        %ANGELCAD_PATH%\xcsg --stl --dxf "xcsg\%%~nd.xcsg"
